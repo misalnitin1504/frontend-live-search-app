@@ -15,7 +15,7 @@ function Home() {
   const handleLogout = async () => {
     try {
       // It's good practice to notify the server to clear the session cookie
-      await axios.post("http://localhost:8080/logout", {}, { withCredentials: true });
+      await axios.post("https://backend-livesearchfilter-12.onrender.com/logout", {}, { withCredentials: true });
     } catch (err) {
       console.error("Logout error:", err);
     } finally {
@@ -38,7 +38,7 @@ function Home() {
     setLoading(true);
     axios
       //.get("http://localhost:8080/api/users/search", {
-      .get("https://backend-livesearchfilter-11.onrender.com/api/users/search", {
+      .get("https://backend-livesearchfilter-12.onrender.com/api/users/search", {
         params: { keyword: debouncedKeyword || "" },
         withCredentials: true,
       })
