@@ -37,8 +37,8 @@ function Home() {
   useEffect(() => {
     setLoading(true);
     axios
-      //.get("http://localhost:8080/api/users/search", {
-      .get("https://backend-livesearchfilter-8.onrender.com/api/users", {
+      .get("http://localhost:8080/api/users/search", {
+      //.get("https://backend-livesearchfilter-8.onrender.com/api/users", {
         params: { keyword: debouncedKeyword || "" },
         withCredentials: true,
       })
