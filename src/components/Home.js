@@ -15,7 +15,7 @@ function Home() {
   const handleLogout = async () => {
     try {
       // It's good practice to notify the server to clear the session cookie
-      await axios.post("https://backend-livesearchfilter-12.onrender.com/logout", {}, { withCredentials: true });
+      await axios.post("https://backend-livesearchfilter-13.onrender.com/logout", {}, { withCredentials: true });
     } catch (err) {
       console.error("Logout error:", err);
     } finally {
@@ -38,7 +38,7 @@ function Home() {
     setLoading(true);
     axios
       //.get("http://localhost:8080/api/users/search", {
-      .get("https://backend-livesearchfilter-12.onrender.com/api/users/search", {
+      .get("https://backend-livesearchfilter-13.onrender.com/api/users/search", {
         params: { keyword: debouncedKeyword || "" },
         withCredentials: true,
       })
@@ -81,7 +81,7 @@ function Home() {
         {/* Updated Header with Logout Button */}
         <div className="card-header bg-dark text-white d-flex justify-content-between align-items-center py-3">
           <div style={{ width: "80px" }}></div> {/* Spacer to help center the title */}
-          <h4 className="mb-0 flex-grow-1 text-center">Live Search Filter App (Debounce + Pagination + Case-Sencetive)</h4>
+          <h4 className="mb-0 flex-grow-1 text-center">Live Search Filter App (Debounce + Pagination + Case-Sensitive)</h4>
           <button 
             className="btn btn-outline-light btn-sm fw-bold px-3"
             onClick={handleLogout}
