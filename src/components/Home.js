@@ -79,7 +79,7 @@ function Home() {
 
       <div className="card shadow-sm border-0">
         {/* Updated Header with Logout Button */}
-        <div className="card-header bg-dark text-white d-flex justify-content-between align-items-center py-3">
+        <div className="card-header bg-primary text-black d-flex justify-content-between align-items-center py-3">
           <div style={{ width: "80px" }}></div> {/* Spacer to help center the title */}
           <h4 className="mb-0 flex-grow-1 text-center">Live Search Filter App (Debounce + Pagination + Case-Sensitive)</h4>
           <button 
